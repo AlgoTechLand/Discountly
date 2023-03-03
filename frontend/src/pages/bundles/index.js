@@ -16,7 +16,7 @@ function Index(props) {
 
   async function fetchBundles() {
     const response = await axios.get(
-      "http://localhost:6969/api/bundles/getAll"
+      `${process.env.BASE_URL}/api/bundles/getAll`
     );
     setBundles(response.data);
   }
